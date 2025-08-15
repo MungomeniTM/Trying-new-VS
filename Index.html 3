@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VSXchange ZA - Connect & Collaborate</title>
+  <meta name="description" content="VSXchange ZA connects skilled professionals with clients and collaborators—builders to coders—in a trusted African network." />
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="#home" aria-label="VSXchange ZA Home">VSXchange ZA</a>
+      </div>
+
+      <nav class="nav" id="nav-menu" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#explore">Explore</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="auth-buttons">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-solid">Sign Up</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation" aria-controls="nav-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <div class="hero-bg">
+      <div class="glow glow-a"></div>
+      <div class="glow glow-b"></div>
+      <div class="glow glow-c"></div>
+      <div class="grid-overlay" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero-content container">
+      <h1 id="hero-title" class="hero-title">Welcome to <span>VSXchange ZA</span></h1>
+      <p class="hero-subtitle">
+        Empowering vocational skills. Connecting workers, creators, and clients — from builders to coders — into one trusted network of collaboration and opportunity.
+      </p>
+
+      <div class="cta-row">
+        <a href="register.html" class="btn btn-cta" data-cta="primary" aria-label="Join the Movement on VSXchange ZA">
+          <span class="btn-glow"></span>
+          <span class="btn-label">Join the Movement</span>
+          <span class="btn-ring" aria-hidden="true"></span>
+        </a>
+        <a href="#explore" class="btn btn-ghost">Explore Skills</a>
+      </div>
+
+      <div class="trust-strip" role="note" aria-label="Trust signals">
+        <span class="dot"></span> Built in South Africa • Designed for Africa • Ready for the world
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section" aria-labelledby="services-title">
+    <div class="section-container container">
+      <h2 id="services-title" class="section-title">Our Services</h2>
+      <p class="section-lead">
+        Showcase your work, discover opportunities, and collaborate with verified professionals.
+      </p>
+
+      <div class="cards">
+        <article class="card reveal">
+          <h3>Find Talent Nearby</h3>
+          <p>Search verified pros by skill & location. From electricians to full-stack devs.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Collaborate Seamlessly</h3>
+          <p>Chat, plan, and deliver together with clarity and trust.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Grow Your Reputation</h3>
+          <p>Build a profile that travels with you — portfolio, ratings, and impact.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Explore -->
+  <section id="explore" class="section" aria-labelledby="explore-title">
+    <div class="section-container container">
+      <h2 id="explore-title" class="section-title">Explore Skills</h2>
+      <p class="section-lead">Browse talents across South Africa. Filter by category, proximity, and rating.</p>
+      <a href="search.html" class="btn btn-solid">Start Exploring</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section" aria-labelledby="about-title">
+    <div class="section-container container">
+      <h2 id="about-title" class="section-title">About VSXchange</h2>
+      <p class="section-lead">
+        Built by creators for creators. VSXchange ZA bridges the gap between skill and demand with a platform that puts trust, transparency, and opportunity first.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section" aria-labelledby="contact-title">
+    <div class="section-container container">
+      <h2 id="contact-title" class="section-title">Contact Us</h2>
+      <p class="section-lead">Have questions or want to partner? Let’s talk.</p>
+      <div class="contact-actions">
+        <a href="mailto:support@vsxchangeza.com" class="btn btn-ghost">Email Us</a>
+        <a href="register.html" class="btn btn-solid">Create Account</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer role="contentinfo" class="footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 VSXchange ZA. All Rights Reserved.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#explore">Explore</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
