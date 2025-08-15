@@ -1,0 +1,25 @@
+// Mobile menu toggle
+const mobileToggle = document.getElementById('mobile-toggle');
+const navMenu = document.querySelector('.nav ul');
+
+mobileToggle.addEventListener('click', () => {
+  mobileToggle.classList.toggle('active');
+  navMenu.classList.toggle('active');
+  mobileToggle.setAttribute('aria-expanded', mobileToggle.classList.contains('active'));
+});
+
+// Scroll reveal
+const revealElements = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+  revealElements.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) {
+      el.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
