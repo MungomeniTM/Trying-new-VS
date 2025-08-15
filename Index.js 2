@@ -1,0 +1,20 @@
+// Mobile Menu Toggle
+const mobileToggle = document.getElementById('mobile-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+mobileToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+  mobileToggle.classList.toggle('active');
+});
+
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+    navMenu.classList.remove('show');
+    mobileToggle.classList.remove('active');
+  });
+});
