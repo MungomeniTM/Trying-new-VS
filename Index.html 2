@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VSXchange ZA - Connect & Collaborate</title>
+<link rel="stylesheet" href="index.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container header-container">
+    <div class="logo"><a href="#home">VSXchange ZA</a></div>
+    <nav class="nav" id="nav-menu">
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#explore">Explore</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+      <a href="login.html" class="btn login-btn">Login</a>
+      <a href="register.html" class="btn signup-btn">Sign Up</a>
+    </div>
+    <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1 class="hero-title">Welcome to <span>VSXchange ZA</span></h1>
+    <p class="hero-subtitle">Empowering vocational skills. Connecting workers, creators, and clients — from builders to coders — into one powerful network of collaboration and opportunity.</p>
+    <a href="register.html" class="btn join-btn">Join the Movement</a>
+  </div>
+</section>
+
+<!-- Sections -->
+<section id="services" class="section">
+  <div class="section-container">
+    <h2>Our Services</h2>
+    <p>Discover a growing network of skilled professionals, ready to collaborate and bring your vision to life.</p>
+  </div>
+</section>
+
+<section id="explore" class="section">
+  <div class="section-container">
+    <h2>Explore Skills</h2>
+    <p>Search, filter, and connect with verified experts near you.</p>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="section-container">
+    <h2>About VSXchange</h2>
+    <p>VSXchange ZA is a platform that bridges the gap between talent and opportunity, built with trust, transparency, and collaboration at its core.</p>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="section-container">
+    <h2>Contact Us</h2>
+    <p>Email: support@vsxchangeza.com | Phone: +27 123 456 789</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 VSXchange ZA. All Rights Reserved.</p>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
