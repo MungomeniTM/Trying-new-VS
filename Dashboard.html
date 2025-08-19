@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VSXchangeZA Dashboard</title>
+<link rel="stylesheet" href="dashboard.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+</head>
+<body>
+<div class="navbar">
+    <div class="logo">VSXchangeZA</div>
+    <div class="nav-links">
+        <button id="homeBtn">Home</button>
+        <button id="exploreBtn">Explore</button>
+        <button id="messagesBtn">Messages</button>
+        <button id="profileBtn">Profile</button>
+        <button id="settingsBtn">Settings</button>
+        <button id="logoutBtn">Logout</button>
+    </div>
+</div>
+
+<div class="sidebar">
+    <h3>Skills Nearby</h3>
+    <div id="skillsFilter"></div>
+</div>
+
+<div class="feed-container">
+    <div class="create-post">
+        <textarea id="postText" placeholder="Share your work..."></textarea>
+        <input type="file" id="postMedia" multiple>
+        <button id="createPostBtn">Post</button>
+    </div>
+    <div id="feed"></div>
+</div>
+
+<!-- Comment Modal -->
+<div id="commentModal" class="modal">
+    <div class="modal-content">
+        <span class="closeBtn">&times;</span>
+        <div id="commentsList"></div>
+        <input type="text" id="commentInput" placeholder="Write a comment...">
+        <button id="sendCommentBtn">Send</button>
+    </div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
