@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create Account — VSXchange ZA</title>
+  <meta name="description" content="Join VSXchange ZA to showcase your skills, find talent nearby, and collaborate with trust." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="auth.css" />
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body class="auth-body">
+  <header class="auth-header">
+    <a class="brand" href="index.html" aria-label="Back to home">VSXchange ZA</a>
+  </header>
+
+  <main class="auth-main" aria-labelledby="register-title">
+    <section class="panel">
+      <div class="panel__bg">
+        <div class="glow glow-a"></div>
+        <div class="glow glow-b"></div>
+        <div class="grid-overlay" aria-hidden="true"></div>
+      </div>
+
+      <div class="panel__content">
+        <h1 id="register-title" class="title">Join the Movement</h1>
+        <p class="subtitle">Create your account and start building your reputation.</p>
+
+        <form id="register-form" novalidate aria-describedby="register-feedback">
+          <div class="grid">
+            <div class="field">
+              <label for="firstName">First Name</label>
+              <input id="firstName" name="firstName" type="text" autocomplete="given-name" required placeholder="Lerato" />
+            </div>
+            <div class="field">
+              <label for="lastName">Last Name</label>
+              <input id="lastName" name="lastName" type="text" autocomplete="family-name" required placeholder="Mabaso" />
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="you@example.com" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+27 71 234 5678" />
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <label for="location">Location</label>
+              <input id="location" name="location" type="text" autocomplete="address-level2" required placeholder="Johannesburg, Gauteng" />
+            </div>
+            <div class="field">
+              <label for="role">Main Role</label>
+              <select id="role" name="role" required>
+                <option value="" disabled selected>Select a role</option>
+                <option>Builder</option>
+                <option>Electrician</option>
+                <option>Plumber</option>
+                <option>Mechanic</option>
+                <option>Carpenter</option>
+                <option>Software Developer</option>
+                <option>Data Analyst</option>
+                <option>Graphic Designer</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <label for="experience">Experience</label>
+              <select id="experience" name="experience" required>
+                <option value="" disabled selected>Years of experience</option>
+                <option>&lt; 1 year</option>
+                <option>1–3 years</option>
+                <option>3–5 years</option>
+                <option>5–10 years</option>
+                <option>10+ years</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="portfolio">Portfolio URL (optional)</label>
+              <input id="portfolio" name="portfolio" type="url" inputmode="url" placeholder="https://…" />
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <label for="password">Password</label>
+              <div class="password-wrap">
+                <input id="password" name="password" type="password" autocomplete="new-password" required placeholder="Create a strong password" />
+                <button class="toggle-pass" type="button" aria-label="Show password" data-target="password">Show</button>
+              </div>
+              <div class="meter" aria-hidden="true">
+                <div id="strength-bar" class="meter__bar"></div>
+              </div>
+              <p id="strength-text" class="hint">Use 8+ chars with letters, numbers & symbols.</p>
+            </div>
+            <div class="field">
+              <label for="confirm">Confirm Password</label>
+              <div class="password-wrap">
+                <input id="confirm" name="confirm" type="password" autocomplete="new-password" required placeholder="Repeat password" />
+                <button class="toggle-pass" type="button" aria-label="Show password" data-target="confirm">Show</button>
+              </div>
+            </div>
+          </div>
+
+          <label class="checkbox">
+            <input id="terms" name="terms" type="checkbox" required />
+            <span>I agree to the <a class="link" href="#">Terms</a> and <a class="link" href="#">Privacy Policy</a>.</span>
+          </label>
+
+          <button id="register-submit" class="btn btn-cta" type="submit" data-loading="Creating account…">
+            <span class="btn-glow"></span>
+            <span class="btn-label">Create Account</span>
+            <span class="btn-ring" aria-hidden="true"></span>
+          </button>
+
+          <div id="register-feedback" class="feedback" role="alert" aria-live="polite"></div>
+
+          <p class="swap">
+            Already have an account? <a class="link" href="login.html">Sign in</a>
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="auth-footer">
+    <p>© 2025 VSXchange ZA • Trust • Transparency • Opportunity</p>
+  </footer>
+
+  <script src="auth.js"></script>
+  <script src="register.js"></script>
+</body>
+</html>
