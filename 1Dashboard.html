@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VSXchangeZA — Dashboard</title>
+  <meta name="color-scheme" content="dark" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <!-- Top App Bar -->
+  <header class="appbar" role="banner">
+    <div class="container appbar-row">
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a class="brand" href="index.html" aria-label="VSXchangeZA Home">VSXchangeZA</a>
+
+      <form class="search" role="search" aria-label="Search the network">
+        <input id="globalSearch" type="search" placeholder="Search…" enterkeyhint="search" />
+        <button type="submit" aria-label="Search">⌕</button>
+      </form>
+
+      <nav class="topnav" aria-label="Primary">
+        <a href="#" class="active">Home</a>
+        <a href="messages.html">Messages</a>
+        <a href="explore.html">Explore</a>
+        <a href="profile.html">Profile</a>
+        <a href="settings.html">Settings</a>
+        <a id="nearbyBtn" href="search.html">Find Skilled People Nearby</a>
+        <button id="logout" class="btn ghost">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container layout" id="main">
+    <!-- Sidebar / Drawer -->
+    <aside id="sidebar" class="sidebar" aria-label="User panel">
+      <div class="usercard">
+        <div class="avatar" id="avatar" aria-hidden="true">👤</div>
+        <div class="user-meta">
+          <p class="hello">Welcome, <strong id="userName">User</strong>!</p>
+          <p class="muted" id="userRole">Role • Location</p>
+        </div>
+        <button id="createPostSidebar" class="btn primary full">+ Create Post</button>
+      </div>
+
+      <nav class="sidelinks" aria-label="Secondary">
+        <a href="#" class="link">My Skills</a>
+        <a href="#" class="link">My Listings</a>
+        <a href="#" class="link">Exchange Requests</a>
+      </nav>
+
+      <section class="quick">
+        <h3>Quick Actions</h3>
+        <div class="chips">
+          <button class="chip">Collaborate</button>
+          <button class="chip">Hire</button>
+          <button class="chip">Post Job</button>
+          <button class="chip">Get Verified</button>
+        </div>
+      </section>
+    </aside>
+
+    <!-- Feed Column -->
+    <section class="feedcol" aria-label="Main feed">
+      <!-- Composer -->
+      <article class="card composer" aria-labelledby="composeTitle">
+        <h2 id="composeTitle" class="sr">Create a post</h2>
+        <div class="composer-row">
+          <div class="avatar small" aria-hidden="true">👤</div>
+          <textarea id="composeText" rows="3" placeholder="Share your work, video, or insight…"></textarea>
+        </div>
+
+        <div class="composer-actions">
+          <label class="file">
+            <input id="composeFile" type="file" accept="image/*,video/*" />
+            <span>Choose file</span>
+            <span class="file-name" id="fileName">No file chosen</span>
+          </label>
+
+          <div class="right">
+            <button id="previewBtn" class="btn ghost">Preview</button>
+            <button id="postBtn" class="btn primary">Post</button>
+          </div>
+        </div>
+
+        <div id="preview" class="preview" hidden>
+          <figure id="previewMedia" class="media"></figure>
+        </div>
+      </article>
+
+      <!-- Sample Feed Items (rendered by JS) -->
+      <div id="feed" class="stack">
+        <!-- skeletons -->
+        <article class="card skeleton"></article>
+        <article class="card skeleton"></article>
+      </div>
+    </section>
+
+    <!-- Right rail (hints / trends) -->
+    <aside class="rightcol" aria-label="Highlights">
+      <section class="card tight">
+        <h3>Trending Skills</h3>
+        <ul class="list">
+          <li>Solar Installations</li>
+          <li>Bricklaying • Finishes</li>
+          <li>Full-stack (Node/React)</li>
+          <li>Plumbing • Compliance</li>
+          <li>UX / UI Prototyping</li>
+        </ul>
+      </section>
+
+      <section class="card tight">
+        <h3>Nearby Projects</h3>
+        <ul class="list" id="nearbyList">
+          <li class="muted">Enable location to see projects around you.</li>
+        </ul>
+        <button id="enableGeo" class="btn ghost full">Use my location</button>
+      </section>
+    </aside>
+  </main>
+
+  <!-- FAB for mobile compose -->
+  <button id="fab" class="fab" aria-label="Create Post">＋</button>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
